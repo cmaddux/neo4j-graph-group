@@ -1,0 +1,25 @@
+version: "3.0"
+services:
+    neo4j:
+        image: neo4j:latest
+        networks:
+            - lan
+        ports:
+            - 7474:7474
+            - 6477:6477
+            - 7687:7687
+        volumes:
+            - ./neo4j/plugins:/plugins
+        environment:
+            NEO4J_AUTH: none
+            NEO4J_dbms_security_procedures_unrestricted: "algo.*"
+    app:
+        build: ./app
+        networks:
+            - lan
+        ports:
+            - 3000:3000
+        volumes:
+            - ./app/core:/home/app
+networks:
+    lan:

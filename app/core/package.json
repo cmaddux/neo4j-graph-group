@@ -1,0 +1,23 @@
+{
+  "name": "core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx jest",
+    "start": "npx fastify-cli start index.js",
+    "start:watch": "nodemon fastify start index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "faker": "^4.1.0",
+    "fastify": "^2.9.0",
+    "fastify-plugin": "^1.6.0",
+    "neo4j-driver": "^1.7.6"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "jest": "^24.9.0"
+  }
+}
