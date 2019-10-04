@@ -14,6 +14,14 @@ const matrixRoutes = require('./routes/matrix');
 
 module.exports = buildFastify;
 
+/**
+ * buildFastify builds base fastify API. The returned fastify
+ * instance can listen for requests or be used in tests.
+ *
+ * @param {Object} opts - top level Fastify API options
+ *
+ * @returns {Object}
+ */
 function buildFastify(opts) {
     const fastify = genFastify(opts);
 

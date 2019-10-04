@@ -5,9 +5,10 @@ const {
 module.exports = routes;
 
 /**
- * Exposes all edge routes.
+ * routes exposes all routes related to retrieving grouping
+ * stats.
  *
- * @param {Object} fastify - scoped fastify object
+ * @param {Object} fastify - scoped fastify instance
  *
  * @returns {Promise}
  */

@@ -25,8 +25,7 @@ async function createOneAsync(request, reply) {
         )
     );
 
-    const peopleIDs = results
-        .map(item => item.identity.toInt());
+    const peopleIDs = results.map(item => item.id);
 
     for (let i = 0; i < matrix.length; i++) {
         const neighbors = matrix[i];
