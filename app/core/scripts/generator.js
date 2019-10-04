@@ -35,7 +35,7 @@ const MATRIX_CT = 2;
 let p = createMatrixAsync(MATRIX_SIZE);
 
 let ct = 1;
-while (ct <= MATRIX_CT) {
+while (ct < MATRIX_CT) {
     p = p.then(() => createMatrixAsync(MATRIX_SIZE));
     ct++;
 }
