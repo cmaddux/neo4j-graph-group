@@ -27,23 +27,10 @@ async function routes(fastify) {
     fastify.get(
         '/nodes',
         async (request, reply) => {
-            const session = request.neo4j;
+            const nodes = request.nodes;
 
-            const result = await session.run(
-                'MATCH (n) RETURN n'
-            );
-
-            const records = result.records
-                .map(item => {
-                    const clean = item.get(0);
-                    return {
-                        id: clean.identity.toInt(),
-                        attributes: clean.properties
-                    };
-
-                });
-
-            reply.code(201)
+            const records = await nodes.allAsync();
+            reply.code(200)
                 .send(
                     { data: records }
                 );

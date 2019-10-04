@@ -42,6 +42,7 @@ POST /edges/{person_id}
 * Clone the repo
 * Move into the app/core directory
 * Run `npm install`
+* Run `npm test` to make sure everything OK
 * Move into the repo root directory
 * Run `docker-compose up`
 * Make a POST /matrix request 
@@ -73,6 +74,6 @@ If you want to take a look at the current state of te graph, go to http://localh
 
 `MATCH (n) RETURN n`
 
-If you want to try to make a large random graph, use the script in `app/core/scripts`. Constants can be modified to change the size of the graph, then run `node generator` to build the graph, calculate and print groups and tear down the graph.
+If you want to try to make a large random graph, use the script in `app/core/scripts`. Constants can be modified to change the size of the graph, then run `node generator` to build the graph, calculate and print groups and tear down the graph (by default builds a 1k node graph with random edges).
 
 Note that for large graphs, increasing the `SPARCITY_FACTOR` even just a tiny bit creates a much more interconnected graph and will make it take longer to build the graph.
