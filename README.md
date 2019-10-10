@@ -1,4 +1,4 @@
-A mega solution to a pretty simple code challenge that I made a bit of a mess of.
+A large solution to a simple graph-related coding challenge trying out Node.js fastify and Neo4j.
 
 ## Requirements
 
