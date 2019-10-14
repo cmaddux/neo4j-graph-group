@@ -1,15 +1,18 @@
-A large solution to a simple graph-related coding challenge trying out Node.js fastify and Neo4j.
+Implements some simple graph-related solutions using stack:
+
+* Node.js (Fastify)
+* Neo4j
 
 ## Requirements
 
 * Docker and compose
 * Node and NPM
 
-## The Problem
+## Problem 1
 
 Given an adjacency matrix with undirected edges between nodes, determine how many distinct groups of nodes exist. Count an individual node with no edges as its own group.
 
-## The Solution
+### Solution
 
 This uses a containerized Neo4j graph database and a Node.js API (using Fastify) to generate a solution. The API exposes the following endpoints relevant for the problem:
 
@@ -37,7 +40,7 @@ Some other helpful endpoints are also exposed:
 
 `POST /edges/{person_id}/knows/{person_id}` - create a relationship between two nodes by providing their IDs.
 
-## Try it
+### Use
 
 1. Clone the repo
 2. Move into the app/core directory
